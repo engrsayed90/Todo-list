@@ -27,7 +27,7 @@ h1 {
   min-height: 70px;
   display: flex;
   align-items: center;
-  border-bottom: 1px solid #F1F1F3;
+  border-bottom: 1px solid #F1F1F2;
 }
 
 .item:last-child {
