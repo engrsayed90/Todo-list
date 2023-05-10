@@ -62,7 +62,7 @@ Item.insertMany(defaultItems, (err) =>{
 });
   res.redirect("/");
     } else {
-      res.render("list", {listTitle: 'Today', newListItems: foundItems});
+      res.render("list", {listTitle: 'Todo List', newListItems: foundItems});
     }  
   })
 });
@@ -100,7 +100,7 @@ app.post("/", function(req, res){
     name : itemName
   })
 
-  if (listName === 'Today') {
+  if (listName === 'Todo List') {
     item.save();
     res.redirect('/');
   } else {
@@ -116,7 +116,7 @@ app.post('/delete', (req, res) => {
   const checkedItemId =  req.body.checkbox;
   const listName = req.body.listName;
 
-  if (listName === "Today") {
+  if (listName === "Todo List") {
     Item.findByIdAndRemove(checkedItemId, (err) =>{
       if (!err) {
         console.log("Successfully deleted checked item.");
